@@ -4,12 +4,21 @@ import dotenv from 'dotenv';
 import apiRoutes from './routes/api';
 import mainRoutes from "./routes";
 import cors from 'cors';
+
 import {mongoConnect} from "./database/mongo";
 dotenv.config();
 mongoConnect();
 const server = express();
+server.use(express.json());
 
-server.use(express.static(path.join(__dirname, '../public')));
+/*server.use((req, res, next) => {
+
+    console.log(JSON.stringify(req.body, null, 2));
+
+    next();
+});*/
+
+
 server.use(express.urlencoded({extended: true}));
 server.use(mainRoutes);
 server.use(cors());
@@ -18,6 +27,8 @@ server.use((req: Request, res: Response) => {
     res.status(404);
     res.json({error: 'Endpoint não encontrado.'});
 });*/
+
+
 
 
 server.listen(process.env.PORT);

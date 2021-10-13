@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import Product from '../models/Product';
-
+import bodyParser from "body-parser";
 
 export const addProduct = async (req:Request,res:Response) => {
     console.log('teste product');

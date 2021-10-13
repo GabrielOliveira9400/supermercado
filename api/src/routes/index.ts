@@ -6,6 +6,7 @@ import * as ProductController from '../controllers/productsController';
 
 
 
+
 const router = Router();
 
 router.get('/', HomeController.home);
