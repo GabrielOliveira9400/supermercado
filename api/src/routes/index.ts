@@ -11,6 +11,8 @@ const router = Router();
 
 router.get('/', HomeController.home);
 router.post('/novo-usuario', UserController.addUser);
-router.post('/novo-produto', ProductController.addProduct);
+router.post('/produto', ProductController.addProduct);
+router.delete('/produto/:_id', ProductController.removeProduct);
+
 
 export default router;

@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import Product from '../models/Product';
 import bodyParser from "body-parser";
+import User from "../models/User";
+
 
 export const addProduct = async (req:Request,res:Response) => {
     console.log('teste product');
@@ -25,6 +27,7 @@ export const addProduct = async (req:Request,res:Response) => {
     });
 };
 
-/*export const removeProduct = async (req,res) =>{
+export const removeProduct = async (req:Request,res:Response) => {
+    let products = await Product.findById(req.params._id);
 
-};*/
+};
