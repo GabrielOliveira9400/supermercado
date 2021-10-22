@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../product.service";
-import { Router} from "@angular/router";
-import {Product} from "../product.model";
+import { Router } from "@angular/router";
+import { Product } from "../product.model";
 
 @Component({
   selector: 'app-product-create',
@@ -15,9 +15,8 @@ export class ProductCreateComponent implements OnInit {
     quantidade: 45,
     tipo: 'Teste',
     dtcadastro: '27/04/2022',
-    descricao: 'SDFSNFDSFNDS'
+    descricao: '',
   }
-
   constructor(private productService: ProductService,
               private router: Router
   ) { }
