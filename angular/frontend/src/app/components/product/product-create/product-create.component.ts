@@ -10,7 +10,7 @@ import { Product } from "../product.model";
 })
 export class ProductCreateComponent implements OnInit {
   product: Product = {
-    nome: 'Produto',
+    name: 'Produto',
     preco: 45,
     quantidade: 45,
     tipo: 'Teste',
