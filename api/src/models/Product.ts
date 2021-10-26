@@ -1,7 +1,7 @@
 import {connection, model, Schema} from 'mongoose';
 
 type productType = {
-    nome: string,
+    name: string,
     preco: number,
     quantidade: number,
     tipo: string,
@@ -9,7 +9,7 @@ type productType = {
     descricao: string
 }
 const produtosSchema = new Schema<productType>({
-    nome: {
+    name: {
        type: String,
         required: true
     },
