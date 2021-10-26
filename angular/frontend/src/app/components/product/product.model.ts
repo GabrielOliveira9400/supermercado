@@ -1,10 +1,10 @@
 export interface Product {
   _id?: string
   name: string
-  preco?: number
-  quantidade?: number
-  tipo?: string
-  dtcadastro?: string
-  descricao?: string
+  price?: number
+  amount?: number
+  typeProduct?: string
+  dtregistration?: string
+  description?: string
 }
 

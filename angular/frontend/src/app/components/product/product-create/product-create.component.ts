@@ -11,11 +11,11 @@ import { Product } from "../product.model";
 export class ProductCreateComponent implements OnInit {
   product: Product = {
     name: 'Produto',
-    preco: 45,
-    quantidade: 45,
-    tipo: 'Teste',
-    dtcadastro: '27/04/2022',
-    descricao: '',
+    price: 45,
+    amount: 45,
+    typeProduct: 'Teste',
+    dtregistration: '27/04/2022',
+    description: '',
   }
   constructor(private productService: ProductService,
               private router: Router

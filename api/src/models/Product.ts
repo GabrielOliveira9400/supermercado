@@ -2,34 +2,34 @@ import {connection, model, Schema} from 'mongoose';
 
 type productType = {
     name: string,
-    preco: number,
-    quantidade: number,
-    tipo: string,
-    dtcadastro: string,
-    descricao: string
+    price: number,
+    amount: number,
+    typeProduct: string,
+    dtregistration: string,
+    description: string
 }
 const produtosSchema = new Schema<productType>({
     name: {
        type: String,
         required: true
     },
-    preco: {
+    price: {
         type: Number,
         required: true
     },
-    quantidade: {
+    amount: {
         type: Number,
         required: true
     },
-    tipo:{
+    typeProduct: {
         type: String,
         required: true
     },
-    dtcadastro: {
+    dtregistration: {
         type: String,
         required: true
     },
-    descricao: {
+    description: {
         type: String,
         required: true
     },
