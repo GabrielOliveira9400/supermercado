@@ -1,12 +1,12 @@
 import {connection, model, Schema} from 'mongoose';
 
 type productType = {
-    name: string,
-    price: number,
-    amount: number,
-    typeProduct: string,
-    dtregistration: string,
-    description: string
+    name?: string,
+    price?: number,
+    amount?: number,
+    typeProduct?: string,
+    dtregistration?: string,
+    description?: string
 }
 const produtosSchema = new Schema<productType>({
     name: {

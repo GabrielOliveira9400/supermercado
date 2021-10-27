@@ -22,11 +22,11 @@ server.use(express.json());
 server.use(express.urlencoded({extended: true}));
 server.use(mainRoutes);
 server.use(cors());
-server.use('/api',apiRoutes);/*
+server.use('/api',apiRoutes);
 server.use((req: Request, res: Response) => {
     res.status(404);
     res.json({error: 'Endpoint não encontrado.'});
-});*/
+});
 
 
 
