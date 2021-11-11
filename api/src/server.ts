@@ -20,8 +20,15 @@ server.use(express.json());
 
 
 server.use(express.urlencoded({extended: true}));
+
+server.use(cors({
+        "origin": "*",
+        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+        "preflightContinue": false,
+        "optionsSuccessStatus": 204
+    }
+));
 server.use(mainRoutes);
-server.use(cors());
 server.use('/api',apiRoutes);
 server.use((req: Request, res: Response) => {
     res.status(404);
