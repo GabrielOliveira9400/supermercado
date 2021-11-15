@@ -44,9 +44,9 @@ export const removeProduct = async (req:Request,res:Response) => {
 
 export const allProduct = async (req:Request,res:Response) => {
     let allProducts = await Product.find({});
-    res.json({
+    res.json(
         allProducts
-    })
+    )
 };
 
 export const getProduct = async(req:Request,res:Response) =>{
