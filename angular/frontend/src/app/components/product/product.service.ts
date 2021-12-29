@@ -30,4 +30,12 @@ export class ProductService {
   read():Observable<Product[]>{
     return this.http.get<Product[]>(this.baseUrl)
   }
+  readById(_id: any):Observable<Product>{
+    const  url = `${this.baseUrl}/${_id}`
+    return this.http.get<Product>(url)
+  }
+  update(product: Product):Observable<Product>{
+    const  url = `${this.baseUrl}/${product._id}`
+    return this.http.put<Product>(url, product)
+  }
 }

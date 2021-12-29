@@ -27,6 +27,8 @@ import { ProductReadComponent } from './components/product/product-read/product-
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ProductCardComponent } from './components/product/product-card/product-card.component';
+import { MatProgressBarModule } from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { MatSortModule } from '@angular/material/sort';
     ForDirective,
     ProductCreateComponent,
     ProductReadComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
